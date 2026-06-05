@@ -1,0 +1,26 @@
+name = "box2d_ada"
+description = "Ada bindings to Box2D v3, Erin Catto's 2D physics engine (pure C)"
+version = "0.1.0"
+authors = ["The Dark Factory Ltd"]
+maintainers = ["tony.gair@thedarkfactory.co.uk"]
+maintainers-logins = ["tonygair"]
+licenses = "MIT"
+website = "https://github.com/the-dark-factory/box2d-ada"
+tags = ["binding", "physics", "box2d", "game", "simulation"]
+project-files = ["box2d_ada.gpr"]
+auto-gpr-with = false
+
+#  The src/ binding is machine-generated (gcc -fdump-ada-spec), so the
+#  usual style checks don't apply to it.
+[build-switches]
+"*".style_checks = "none"
+
+#  Box2D v3 (vendor/box2d) is built into vendor/box2d/build/src/libbox2d.a by
+#  scripts/build-box2d.sh (CMake). Until that step is wired as an Alire action,
+#  downstream consumers must run `./scripts/build-box2d.sh` once before
+#  `alr build`. Requires cmake and a C compiler.
+
+[available.'case(os)']
+macos = true
+linux = true
+windows = false  # Untested.
