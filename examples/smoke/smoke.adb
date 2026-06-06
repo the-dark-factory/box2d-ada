@@ -1,4 +1,5 @@
 with Ada.Text_IO;             use Ada.Text_IO;
+with Ada.Command_Line;        use Ada.Command_Line;
 with Interfaces.C;            use Interfaces.C;
 with box2d_box2d_h;           use box2d_box2d_h;
 with box2d_types_h;           use box2d_types_h;
@@ -50,6 +51,7 @@ begin
       Put_Line ("  PASS -- the box fell through the real Box2D solver");
    else
       Put_Line ("  FAIL -- box did not fall (end y =" & End_Y'Image & ")");
+      Set_Exit_Status (Failure);   --  make `alr test` / CI see the failure
    end if;
 
    b2DestroyWorld (World);
