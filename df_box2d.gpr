@@ -6,7 +6,7 @@
 --  (built separately by scripts/build-box2d.sh via CMake) plus the
 --  macOS Xcode SDK path.
 
-library project Box2d_Ada is
+library project Df_Box2d is
 
    for Library_Name use "box2d_ada";
    for Library_Kind use "static";
@@ -29,4 +29,4 @@ library project Box2d_Ada is
       for Default_Switches ("ada") use ("-gnat2022", "-gnatws");
    end Compiler;
 
-end Box2d_Ada;
+end Df_Box2d;

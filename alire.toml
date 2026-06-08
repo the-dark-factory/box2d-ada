@@ -1,4 +1,4 @@
-name = "box2d_ada"
+name = "df_box2d"
 description = "Ada bindings to Box2D v3, Erin Catto's 2D physics engine (pure C)"
 version = "0.1.0"
 authors = ["The Dark Factory Ltd"]
@@ -7,7 +7,7 @@ maintainers-logins = ["tonygair"]
 licenses = "MIT"
 website = "https://github.com/the-dark-factory/box2d-ada"
 tags = ["binding", "physics", "box2d", "game", "simulation"]
-project-files = ["box2d_ada.gpr"]
+project-files = ["df_box2d.gpr"]
 auto-gpr-with = false
 
 #  The src/ binding is machine-generated (gcc -fdump-ada-spec), so the

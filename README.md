@@ -3,7 +3,7 @@
 An Ada binding to [Box2D](https://box2d.org/) **v3** — Erin Catto's 2D physics
 engine, rewritten in pure C for v3.0, which makes it a clean C-ABI binding target.
 
-Alire crate: **`box2d_ada`**.
+Alire crate: **`df_box2d`**.
 
 The thin binding is **generated** from Box2D's C headers with GNAT's
 `-fdump-ada-spec`, then compiled against the real `libbox2d.a`. It covers the
@@ -30,7 +30,7 @@ fails (non-zero exit) if the box does not fall. To drive the tools directly
 instead of through Alire:
 
 ```sh
-gprbuild -P box2d_ada.gpr    # the binding
+gprbuild -P df_box2d.gpr    # the binding
 bash scripts/test.sh         # build + run the smoke test
 ```
 
